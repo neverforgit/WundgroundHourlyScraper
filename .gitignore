@@ -14,7 +14,7 @@ output/
 
 ### Ignore my actual config files
 config_*.ini
-!config/config_scrape_hourly_template
+!config_scrape_hourly_template
 
 ### Ignore executables in \bin (execpt for test.py and time_df_growth)
 bin/*.py
