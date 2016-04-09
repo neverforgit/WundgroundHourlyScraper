@@ -13,12 +13,11 @@ output/
 **/output**
 
 ### Ignore my actual config files
-config_*.ini
-!config_scrape_hourly_template
+config/config_*.ini
+!config/config_scrape_hourly_template.ini
 
 ### Ignore executables in \bin (execpt for test.py and time_df_growth)
 bin/*.py
-!bin/test.py
 !bin/scrape_hourly.py
 
 ### Ignore Pycharm project files
