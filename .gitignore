@@ -1,0 +1,32 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+### Ignore bfg.jar reports from when I make messes
+./..bfg-report
+
+### Ignore data folders and output folders
+data/
+./data/
+**/data*
+
+output/
+./output/
+**/output**
+
+### Ignore my actual config files
+config_*.ini
+
+### Ignore executables in \bin (execpt for test.py and time_df_growth)
+bin/*.py
+!bin/test.py
+
+### Ignore Pycharm project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+
+### Ignore scraper output
+*.geojson
+*.js
+*.txt.gz
