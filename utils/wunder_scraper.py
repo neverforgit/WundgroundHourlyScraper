@@ -9,6 +9,8 @@ from datetime import date, timedelta
 import numpy.random
 import requests
 
+__author__ = "Andrew Campbell"
+
 """
 This script is used to automate the downloading of files from the Weather Underground history.
 """
@@ -79,6 +81,8 @@ def scrape_history(start_date, end_date, base_url, url_params, sleep_time, out_d
                 logging.info('time to sleep ' + str(ts))
                 url = build_url(dt, base_url, url_params)
                 r = requests.get(url)
+                #TODO check if any data is in the returned page. Wunderground will serve up just the column names
+                #TODO with no rows when no data exists.
                 # Request has been served succesfully, so write it to a csv
                 out_path = os.path.join(out_dir, dt.strftime('%Y_%m_%d.csv'))
                 #TODO write a helper function to cleanup the output csv files. The current version includes a bunch of
