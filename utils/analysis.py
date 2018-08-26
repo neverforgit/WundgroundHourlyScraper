@@ -103,6 +103,30 @@ def plot_hoursbelow_dist(mean_df, fig_path, metric='TemperatureF', total_hours=F
     plt.savefig(fig_path)
     return df_dist
 
+def hoursbelow_dist(mean_df, metric='TemperatureF', total_hours = False):
+    """
+    Returns the metric distribution in incremenets of one uit. If default metric used, will return chilling hours
+    in one-degree F increments.
+    :param mean_df: (pd.DataFrame) Output of hourly_averages. Each row is a unique hour from a unique day.
+    :param metric: (str) Metric to be analysed.
+    :param total_hours: (bool) If True, calculates the distribution over all hours in the mean_df. If False, reports
+    expected hours for one 365-day year.
+    :return: (pd.DataFrame)
+    """
+    # Caclulate the empirical CDF
+    ecdf = ECDF(mean_df[metric])
+    m = mean_df[metric].tolist()
+    m.sort()
+    if total_hours:
+        hours = mean_df.shape[0]
+    else:
+        hours = 24*365
+    # Range of temps
+    temps = np.arange(int(np.min(mean_df[metric])), int(np.max(mean_df[metric])))
+    dist = ecdf(temps)
+    dist.sort()
+    # Cast to hours and create df
+    return pd.DataFrame(data={metric: temps, 'hours': dist*hours})
 
 
 
