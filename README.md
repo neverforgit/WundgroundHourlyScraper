@@ -3,7 +3,7 @@ Scrapes hourly historical data from Weather Underground since the API only offer
 
 I am using this calculate the annual chilling hours for selecting fruit varieties for the garden.
 
-![alt tag](https://lh3.googleusercontent.com/kuA10ySP9hNVAuQ1B4-cdFyBwYEkfLW32V6ppZm4LPJYRaGIf0hBBQ2HeBlHrQi9Dbu-1XA2qolFRC1l_rUyaWWrKtTQeBqgnjTsaJsQriDBD4V_7ifWkvphJHvHelqWLOYxLIxw31eBOFK-HSf3ACXNMWGPNOAv7XvkMpmruZahjcEgdFskQSy4uMNfuZdJY6bMm5NP_B68Ra6neBCL4Ked-IdnRD_U6HIaH9IG8RByLT2AqX8Q_5lY-auEwxa_aKmPnZXuQsdu0i4vDiPtnolZDnPSv5fvtmd7nOfp7vsEio3ZPHg-4m-ypNz2YYJXizU_j_d0OsBHnDXfJzsQc0LwkjYDZXnWSrZD8DHjfd0jjNBembPwC3ESGqT5TciVUbZjhCL11Pe51vXWPMjXC_8ShZbaWwPeOAv-LLSDRdpSjAuEidY-gMnCK8Bicse_tW72v3xE9t0lMP4ZQ7Hvfk0wplkkStr-q58PCZ2cVRPn8azl8HXB6MaB1VT6Y6sI1EuNn0sdNNxXG0LVB8F8vUXUlqSi6T6abyE1UVQ2UrI7tApI8xEq46U7Oa7nsDFJX4Ko=w1000-h800-no)
+![alt tag](https://github.com/neverforgit/WundgroundHourlyScraper/blob/master/2014_chilling_hours.png?raw=true)
 
 # TODO
 1 - Check for missing data from Wunderground. Current is not aware of missing data (16/04/08)
